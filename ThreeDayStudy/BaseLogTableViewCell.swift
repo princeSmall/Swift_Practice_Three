@@ -12,10 +12,7 @@ class BaseLogTableViewCell: UITableViewCell {
 
     var nameLabel = UILabel()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+   
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         nameLabel = UILabel.init(frame: CGRect(x: UIScreen.main.bounds.size.width / 2.0 - 100, y: 20, width: 200, height: 20))
@@ -23,6 +20,11 @@ class BaseLogTableViewCell: UITableViewCell {
         nameLabel.text = "Log Out"
         nameLabel.textAlignment = NSTextAlignment.center
         contentView.addSubview(nameLabel)
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
     
     required init?(coder aDecoder: NSCoder) {

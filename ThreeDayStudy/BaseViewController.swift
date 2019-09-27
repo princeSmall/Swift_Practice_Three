@@ -21,8 +21,6 @@ class BaseViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
     
     var socialModelArray:[models] = []
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setCurrentModel()
